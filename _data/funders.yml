@@ -1,0 +1,4 @@
+# Funding agency logos, shown on the About page.
+# Each entry needs: image (filename in images/), url
+- image: NSF.png
+  url: https://www.nsf.gov/

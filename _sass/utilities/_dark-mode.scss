@@ -1,0 +1,42 @@
+// =============================================================
+// Dark mode — Bootstrap 5.3 color-mode overrides
+// =============================================================
+
+[data-bs-theme="dark"] {
+  .navbar-toggler-icon {
+    filter: invert(1);
+  }
+
+  .pub-search {
+    background-color: var(--bg-secondary);
+  }
+
+  // Slightly reduce image brightness in dark mode
+  .profile-photo,
+  .team-photo,
+  .pi-photo {
+    filter: brightness(0.92);
+  }
+
+  // PlaleLab navbar mark is dark-teal-on-transparent; force it white
+  // in dark mode instead of shipping a second image asset.
+  .navbar-brand-mark {
+    filter: brightness(0) invert(1);
+  }
+
+  // MathJax SVG equations — force light color
+  mjx-container svg {
+    color: var(--text-primary) !important;
+  }
+
+  mjx-container {
+    color: var(--text-primary) !important;
+  }
+
+  // MathJax equation reference links
+  .MathJax_ref,
+  .MathJax a,
+  mjx-container a {
+    color: var(--accent) !important;
+  }
+}
