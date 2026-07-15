@@ -2,6 +2,14 @@
 // Publication entry
 // =============================================================
 
+// jekyll-scholar wraps entries in an <ol> by default — drop the
+// numbering, entries are already visually separated by .pub-entry
+#pubList ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
 .pub-entry {
   padding: var(--space-6) 0;
   border-bottom: 1px solid var(--border-color);
