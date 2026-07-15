@@ -5,7 +5,6 @@ name: "Beth Plale"
 title: "Executive Director, School of Computer and Data Sciences"
 institution: "University of Oregon"
 email: plalelab@uoregon.edu
-photo: headshot.jpg  # place your photo in images/
 
 # ============================================================
 # STEP 2: Your Links (optional -- delete any you don't use)
@@ -41,7 +40,6 @@ analytics:
 # STEP 4: Choose Your Pages (comment out any you don't need)
 # ============================================================
 nav_pages:
-  - name: about
   - name: research
   - name: team
   - name: publications

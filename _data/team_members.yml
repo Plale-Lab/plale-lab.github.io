@@ -1,30 +1,18 @@
 # Current students and researchers.
-# Each entry needs: name, photo, info
-# Optional: email, website, scholar, github, researchgate, cv
-# Photos go in images/ or images/team/
+# Each entry needs: name
+# Optional: info, email, website, scholar, github, researchgate, cv
 
 - name: Beth Plale
-  photo: headshot.jpg
   info: Principal Investigator
   email: plalelab@uoregon.edu
   scholar: https://scholar.google.com/citations?user=CyGvFJkAAAAJ
 
 - name: Neelesh Karthikeyan
-  photo: team/neelesh-karthikeyan.svg
-  info: Lab Member
 
 - name: Manikya Swathi Vallabhajosyula
-  photo: team/manikya-swathi-vallabhajosyula.svg
-  info: Lab Member
 
 - name: Agulugaha Isuru Madhushanka Gamage
-  photo: team/isuru-gamage.svg
-  info: Lab Member
 
 - name: William Qiu
-  photo: team/william-qiu.svg
-  info: Lab Member
 
 - name: Ellen Thompson
-  photo: team/ellen-thompson.svg
-  info: Lab Member

@@ -7,17 +7,12 @@ permalink: /team/
 
 ## Team
 
-**We are looking for new lab members!**
-
 {% if site.data.team_members.size > 0 %}
-## Lab Members
-
 <div class="team-grid">
 {% for member in site.data.team_members %}
 <div class="team-card">
-<img src="{{ site.url }}{{ site.baseurl }}/images/{{ member.photo }}" class="team-photo" alt="{{ member.name }}" loading="lazy">
 <h4 class="team-name">{{ member.name }}</h4>
-<p class="team-info">{{ member.info }}</p>
+{% if member.info %}<p class="team-info">{{ member.info }}</p>{% endif %}
 <div class="team-links">
 {% if member.email %}<a href="mailto:{{ member.email }}" class="icon-link" title="Email"><i class="fa-solid fa-envelope"></i></a>{% endif %}
 {% if member.website %}<a href="{{ member.website }}" class="icon-link" title="Website"><i class="fa-solid fa-house"></i></a>{% endif %}
