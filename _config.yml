@@ -43,7 +43,6 @@ analytics:
 nav_pages:
   - name: about
   - name: research
-  - name: projects
   - name: team
   - name: publications
   # - name: talks        # not used for this lab site
