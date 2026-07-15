@@ -10,6 +10,13 @@
   padding: 0;
 }
 
+// The base typography rule that caps <li> at 65ch for readable prose
+// also caps each bibliography <li> here, leaving the card's right
+// side empty — undo it within the publications list.
+#pubList li {
+  max-width: none;
+}
+
 .pub-entry {
   padding: var(--space-6) 0;
   border-bottom: 1px solid var(--border-color);
