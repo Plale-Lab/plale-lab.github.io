@@ -49,23 +49,15 @@
   }
 }
 
-.home-hero-sub {
-  font-size: 1.0625rem;
-  color: var(--text-muted);
-  margin-bottom: var(--space-2);
-  font-style: italic;
-  max-width: none;
-}
-
 // Hero logo — the lab's wordmark, replaces a plain text heading
 .home-hero-logo {
   display: block;
-  height: 96px;
+  height: 160px;
   width: auto;
   margin-bottom: var(--space-4);
 
   @media (max-width: 768px) {
-    height: 76px;
+    height: 110px;
   }
 }
 
