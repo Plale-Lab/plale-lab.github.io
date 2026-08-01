@@ -1,82 +1,106 @@
 // =============================================================
-// Pill buttons and icon links
+// Buttons, publication actions, and profile links
 // =============================================================
 
-.btn-pill {
-  display: inline-block;
-  padding: 0.25rem 0.875rem;
-  font-size: 0.75rem;
-  font-weight: 600;
-  border-radius: var(--radius-full);
+.button {
+  align-items: center;
   border: 1px solid transparent;
+  border-radius: var(--radius-md);
+  display: inline-flex;
+  font-size: 0.875rem;
+  font-weight: 600;
+  gap: var(--space-2);
+  justify-content: center;
+  min-height: 2.75rem;
+  padding: 0 var(--space-4);
+  transition: background-color var(--transition-fast), border-color var(--transition-fast), color var(--transition-fast), transform var(--transition-fast);
+
+  &:hover { transform: translateY(-1px); }
+}
+
+.button--primary {
+  background: var(--text-primary);
+  border-color: var(--text-primary);
+  color: var(--bg-primary);
+
+  &:hover {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: #fff;
+  }
+}
+
+.button--secondary {
+  background: transparent;
+  border-color: var(--border-color);
+  color: var(--text-primary);
+
+  &:hover {
+    background: var(--bg-card);
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+}
+
+.btn-pill {
+  border: 1px solid transparent;
+  border-radius: var(--radius-sm);
   cursor: pointer;
-  transition: all var(--transition-fast);
-  text-decoration: none;
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
   line-height: 1.6;
+  padding: 0.3rem 0.75rem;
+  text-decoration: none;
   text-transform: uppercase;
-  letter-spacing: 0.04em;
+  transition: background-color var(--transition-fast), border-color var(--transition-fast), color var(--transition-fast);
 
-  &.btn-pdf {
-    background-color: var(--accent);
+  &.btn-pdf,
+  &.btn-website {
+    background: var(--accent);
     color: #fff;
-    &:hover { background-color: var(--accent-hover); color: #fff; }
+    &:hover { background: var(--accent-hover); color: #fff; }
   }
 
-  &.btn-doi {
-    background-color: var(--text-primary);
+  &.btn-doi,
+  &.btn-git {
+    background: var(--text-primary);
     color: var(--bg-primary);
-    &:hover { opacity: 0.85; color: var(--bg-primary); }
+    &:hover { background: var(--accent); color: #fff; }
   }
 
-  &.btn-arxiv {
-    background-color: #b31b1b;
+  &.btn-arxiv,
+  &.btn-paper {
+    background: #923737;
     color: #fff;
-    &:hover { background-color: #8c1515; color: #fff; }
+    &:hover { background: #742a2a; color: #fff; }
   }
 
   &.btn-bib,
   &.btn-abstract {
-    background-color: transparent;
-    color: var(--text-secondary);
+    background: transparent;
     border-color: var(--border-color);
-    &:hover {
-      border-color: var(--accent);
-      color: var(--accent);
-    }
-  }
-
-  &.btn-website {
-    background-color: var(--accent);
-    color: #fff;
-    &:hover { background-color: var(--accent-hover); color: #fff; }
-  }
-
-  &.btn-git {
-    background-color: var(--text-primary);
-    color: var(--bg-primary);
-    &:hover { opacity: 0.85; color: var(--bg-primary); }
-  }
-
-  &.btn-paper {
-    background-color: #b31b1b;
-    color: #fff;
-    &:hover { background-color: #8c1515; color: #fff; }
+    color: var(--text-secondary);
+    &:hover { border-color: var(--accent); color: var(--accent); }
   }
 }
 
 .icon-link {
-  display: inline-flex;
   align-items: center;
-  justify-content: center;
-  width: 2.25rem;
-  height: 2.25rem;
-  border-radius: var(--radius-full);
+  border: 1px solid transparent;
+  border-radius: var(--radius-md);
   color: var(--text-muted);
-  transition: all var(--transition-fast);
-  font-size: 1.125rem;
+  display: inline-flex;
+  font-size: 1rem;
+  height: 2.75rem;
+  justify-content: center;
+  transition: background-color var(--transition-fast), border-color var(--transition-fast), color var(--transition-fast);
+  width: 2.75rem;
 
   &:hover {
+    background: var(--accent-light);
+    border-color: var(--border-color);
     color: var(--accent);
-    background-color: var(--accent-light);
   }
 }

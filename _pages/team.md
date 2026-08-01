@@ -5,21 +5,26 @@ sitemap: false
 permalink: /team/
 ---
 
-## Team
+# Team
+
+<p class="page-lead">Researchers connecting computational systems, data infrastructure, and accountable AI.</p>
 
 {% if site.data.team_members.size > 0 %}
 <div class="team-grid">
 {% for member in site.data.team_members %}
 <div class="team-card">
-<img src="{{ site.url }}{{ site.baseurl }}/images/{{ member.photo }}" class="team-photo" alt="{{ member.name }}" loading="lazy">
-<h4 class="team-name">{{ member.name }}</h4>
+<img src="{{ '/images/' | append: member.photo | relative_url }}" class="team-photo" alt="{{ member.name }}" loading="lazy">
+<h2 class="team-name">{{ member.name }}</h2>
 {% if member.info %}<p class="team-info">{{ member.info }}</p>{% endif %}
-<div class="team-links">
-{% if member.email %}<a href="mailto:{{ member.email }}" class="icon-link" title="Email"><i class="fa-solid fa-envelope"></i></a>{% endif %}
-{% if member.website %}<a href="{{ member.website }}" class="icon-link" title="Website"><i class="fa-solid fa-house"></i></a>{% endif %}
-{% if member.scholar %}<a href="{{ member.scholar }}" class="icon-link" title="Google Scholar"><i class="ai ai-google-scholar"></i></a>{% endif %}
-{% if member.github %}<a href="{{ member.github }}" class="icon-link" title="GitHub"><i class="fa-brands fa-github"></i></a>{% endif %}
-</div>
+{% if member.email or member.website or member.scholar or member.github or member.orcid %}
+<nav class="team-links" aria-label="{{ member.name }} profiles">
+{% if member.email %}<a href="mailto:{{ member.email }}" class="icon-link" aria-label="Email {{ member.name }}" title="Email"><i class="fa-solid fa-envelope" aria-hidden="true"></i></a>{% endif %}
+{% if member.website %}<a href="{{ member.website }}" class="icon-link" aria-label="{{ member.name }} website" title="Website"><i class="fa-solid fa-house" aria-hidden="true"></i></a>{% endif %}
+{% if member.scholar %}<a href="{{ member.scholar }}" class="icon-link" aria-label="{{ member.name }} on Google Scholar" title="Google Scholar"><i class="ai ai-google-scholar" aria-hidden="true"></i></a>{% endif %}
+{% if member.github %}<a href="{{ member.github }}" class="icon-link" aria-label="{{ member.name }} on GitHub" title="GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a>{% endif %}
+{% if member.orcid %}<a href="{{ member.orcid }}" class="icon-link" aria-label="{{ member.name }} ORCID" title="ORCID"><i class="ai ai-orcid" aria-hidden="true"></i></a>{% endif %}
+</nav>
+{% endif %}
 </div>
 {% endfor %}
 </div>

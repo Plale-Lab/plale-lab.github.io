@@ -1,15 +1,22 @@
 // =============================================================
-// Generic responsive grid utility
+// Global layout
 // =============================================================
 
 .grid-auto {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: var(--space-6);
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
 }
 
 .site-container {
-  max-width: var(--container-max);
   margin: 0 auto;
-  padding: var(--space-8) var(--container-padding) 0;
+  max-width: var(--container-max);
+  padding: var(--space-10) var(--container-padding) 0;
+}
+
+.home-content { min-width: 0; }
+
+@media (max-width: 767px) {
+  :root { --container-padding: 1rem; }
+  .site-container { padding-top: var(--space-8); }
 }

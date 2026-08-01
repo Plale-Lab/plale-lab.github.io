@@ -13,7 +13,7 @@ links:
   google_scholar: "https://scholar.google.com/citations?user=CyGvFJkAAAAJ"
   github: "https://github.com/plale-lab"
   researchgate: ""
-  orcid: ""
+  orcid: "https://orcid.org/0000-0003-2164-8132"
   twitter: ""
   linkedin: ""
   cv: ""  # e.g., "papers/cv.pdf" — leave blank to hide the CV icon
@@ -21,9 +21,9 @@ links:
 # ============================================================
 # STEP 3: Site Settings
 # ============================================================
-accent_color: "#2E9C93"      # PlaleLab brand teal (from logos/)
+accent_color: "#176F66"      # accessible action teal derived from the PlaleLab palette
 dark_mode: true              # show dark mode toggle in navbar
-description: "Plale Lab — Traceable Intelligence. Data and Information Management in AI, University of Oregon"
+description: "PlaleLab builds research infrastructure that turns computation into traceable evidence and accountable AI."
 baseurl: ""
 url: "https://plale-lab.github.io"
 
@@ -41,7 +41,14 @@ analytics:
 # ============================================================
 nav_pages:
   - name: team
+    label: Team
+    url: /team/
   - name: publications
+    label: Publications
+    url: /publications/
+  - name: news
+    label: News
+    url: /allnews.html
   # - name: talks        # not used for this lab site
   # - name: teaching     # not used for this lab site
   # - name: blogs        # not used for this lab site

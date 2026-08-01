@@ -5,15 +5,10 @@ sitemap: false
 permalink: /allnews.html
 ---
 
-## News
+# News
 
-<div class="section-card" markdown="0">
-<div class="news-timeline">
-{% for article in site.data.news %}
-<div class="news-item">
-<span class="news-date">{{ article.date }}</span>
-<span class="news-headline">{{ article.headline }}</span>
-</div>
-{% endfor %}
-</div>
+<p class="page-lead">Selected publications, releases, collaborations, and milestones from across the lab.</p>
+
+<div markdown="0">
+{% include news-list.html all=true %}
 </div>

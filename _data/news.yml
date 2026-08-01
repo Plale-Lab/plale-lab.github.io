@@ -1,5 +1,29 @@
-# News items shown on the home page sidebar.
-# The 3 most recent are shown; all appear on /allnews.
-# Each entry needs: date, headline
-- date: 14 July, 2026
-  headline: "Plale Lab website launched"
+# Curated lab news. The homepage shows the first three featured entries.
+# Required: date (ISO), category, headline. Optional: summary, url, featured.
+
+- date: 2026-07-31
+  category: Evidence release
+  headline: "Auditable metadata augmentation artifacts are now available"
+  summary: "Prompts, method descriptions, corpus manifests, and aggregate results make the evaluation path inspectable."
+  url: https://github.com/Plale-Lab/patra-metadata-augmentation-study
+  featured: true
+
+- date: 2026-07-31
+  category: Research
+  headline: "A new HPC-to-edge workflow connects model testing and deployment"
+  summary: "The PEARC '26 work brings ML Field Planner, Patra, and CKN into one reproducible deployment path."
+  url: https://doi.org/10.1145/3785462.3815843
+  featured: true
+
+- date: 2024-09-19
+  category: Publication
+  headline: "Patra ModelCards presented at IEEE e-Science 2024"
+  summary: "The paper introduces model cards as evolving accountability objects in the edge-cloud continuum."
+  url: https://doi.org/10.1109/e-Science62913.2024.10678710
+  featured: true
+
+- date: 2026-07-14
+  category: Lab update
+  headline: "The PlaleLab website launched"
+  summary: "A public home for the lab's projects, people, publications, and open research artifacts."
+  featured: false
