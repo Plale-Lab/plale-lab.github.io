@@ -1,8 +1,11 @@
 <nav class="navbar sticky-top navbar-expand-md">
   <div class="container" style="max-width: var(--container-max);">
-    <a class="navbar-brand" href="{{ site.url }}{{ site.baseurl }}/">
-      <img src="{{ site.url }}{{ site.baseurl }}/images/plalelab-icon.png" width="24" height="24" class="d-inline-block align-text-top navbar-brand-mark" alt="">
-      {{ site.lab_name | default: site.name | escape }}
+    <a class="navbar-brand" href="{{ '/' | relative_url }}">
+      <img src="{{ '/images/brand/plalelab-icon.svg' | relative_url }}" width="28" height="28" class="navbar-brand-mark" alt="">
+      <span class="navbar-brand-copy">
+        <strong>{{ site.lab_name | default: site.name | escape }}</strong>
+        <small>{{ site.lab_tagline }}</small>
+      </span>
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -11,25 +14,22 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav me-auto">
         <li class="nav-item">
-          <a class="nav-link{% if page.url == '/' %} active{% endif %}" href="{{ site.url }}{{ site.baseurl }}/">Home</a>
+          <a class="nav-link{% if page.url == '/' %} active{% endif %}" href="{{ '/' | relative_url }}">Home</a>
         </li>
         {% for nav in site.nav_pages %}
-        {% if nav.children %}
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle{% if page.url contains nav.name %} active{% endif %}" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">{{ nav.name | capitalize }}</a>
-          <ul class="dropdown-menu">
-            {% for child in nav.children %}
-            <li><a class="dropdown-item" href="{{ site.url }}{{ site.baseurl }}{{ child.url }}">{{ child.name }}</a></li>
-            {% endfor %}
-          </ul>
-        </li>
-        {% else %}
         <li class="nav-item">
-          <a class="nav-link{% if page.url contains nav.name %} active{% endif %}" href="{{ site.url }}{{ site.baseurl }}/{{ nav.name }}/">{{ nav.name | capitalize }}</a>
+          <a class="nav-link{% if page.url == nav.url or page.url contains nav.name %} active{% endif %}" href="{{ nav.url | relative_url }}">{{ nav.label | default: nav.name | capitalize }}</a>
         </li>
-        {% endif %}
         {% endfor %}
       </ul>
+      <div class="nav-actions d-flex align-items-center">
+        <a class="nav-github" href="{{ site.links.github }}"><i class="fa-brands fa-github" aria-hidden="true"></i><span>GitHub</span></a>
+        {% if site.dark_mode %}
+        <button class="dark-mode-toggle" id="darkModeToggle" aria-label="Switch color theme" title="Switch color theme">
+          <i class="fa-solid fa-sun" id="themeIcon"></i>
+        </button>
+        {% endif %}
+      </div>
     </div>
   </div>
 </nav>

@@ -1,0 +1,18 @@
+{% assign news_items = site.data.news %}
+{% unless include.all %}
+  {% assign news_items = site.data.news | where: "featured", true %}
+{% endunless %}
+<div class="news-list{% if include.all %} news-list--archive{% endif %}">
+  {% for article in news_items limit: include.limit %}
+  <article class="news-item fade-in-section">
+    <div class="news-item__meta">
+      <time datetime="{{ article.date | date: '%Y-%m-%d' }}">{{ article.date | date: "%b %d, %Y" }}</time>
+      <span>{{ article.category }}</span>
+    </div>
+    {% if include.all %}<h2 class="news-item__title">{% else %}<h3 class="news-item__title">{% endif %}
+      {% if article.url %}<a href="{{ article.url }}">{{ article.headline }}</a>{% else %}{{ article.headline }}{% endif %}
+    {% if include.all %}</h2>{% else %}</h3>{% endif %}
+    {% if article.summary %}<p>{{ article.summary }}</p>{% endif %}
+  </article>
+  {% endfor %}
+</div>

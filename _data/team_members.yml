@@ -1,6 +1,6 @@
 # Current students and researchers.
 # Each entry needs: name, photo
-# Optional: info, email, website, scholar, github, researchgate, cv
+# Optional: info, email, website, scholar, github, orcid, researchgate, cv
 
 - name: Beth Plale
   photo: team/beth-plale.svg
@@ -8,6 +8,7 @@
   email: plale@uoregon.edu
   website: https://bethplale.com/
   scholar: https://scholar.google.com/citations?user=CyGvFJkAAAAJ
+  orcid: https://orcid.org/0000-0003-2164-8132
 
 - name: Neelesh Karthikeyan
   photo: team/neelesh-karthikeyan.svg

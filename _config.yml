@@ -13,7 +13,7 @@ links:
   google_scholar: "https://scholar.google.com/citations?user=CyGvFJkAAAAJ"
   github: "https://github.com/plale-lab"
   researchgate: ""
-  orcid: ""
+  orcid: "https://orcid.org/0000-0003-2164-8132"
   twitter: ""
   linkedin: ""
   cv: ""  # e.g., "papers/cv.pdf" — leave blank to hide the CV icon
@@ -21,8 +21,9 @@ links:
 # ============================================================
 # STEP 3: Site Settings
 # ============================================================
-accent_color: "#2E9C93"      # PlaleLab brand teal (from logos/)
-description: "Plale Lab — Traceable Intelligence. Data and Information Management in AI, University of Oregon"
+accent_color: "#176F66"      # accessible action teal derived from the PlaleLab palette
+dark_mode: true              # show dark mode toggle in navbar
+description: "PlaleLab builds research infrastructure that turns computation into traceable evidence and accountable AI."
 baseurl: ""
 url: "https://plale-lab.github.io"
 
@@ -39,17 +40,15 @@ analytics:
 # STEP 4: Choose Your Pages (comment out any you don't need)
 # ============================================================
 nav_pages:
-  - name: research
-    children:
-      - { name: "Computational & Data Infrastructure for AI", url: /research/computational-data-infrastructure/ }
-      - { name: "High Performance & Distributed Computing", url: /research/hpc-distributed-computing/ }
-      - { name: "Open Science", url: /research/open-science/ }
-      - { name: "Provenance & Reproducibility", url: /research/provenance-reproducibility/ }
-      - { name: "AI Ethics & Accountability", url: /research/ai-ethics-accountability/ }
   - name: team
+    label: Team
+    url: /team/
   - name: publications
+    label: Publications
+    url: /publications/
   - name: news
-  - name: contact
+    label: News
+    url: /allnews.html
   # - name: talks        # not used for this lab site
   # - name: teaching     # not used for this lab site
   # - name: blogs        # not used for this lab site
