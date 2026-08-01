@@ -1,5 +1,6 @@
-# News items shown on the home page sidebar.
-# The 3 most recent are shown; all appear on /allnews.
+# News items shown on the /news/ page, most recent first.
 # Each entry needs: date, headline
+# Optional: category (short tag, e.g. "Announcement", "Publication", "Positions")
+# Optional: body (a longer paragraph shown under the headline)
 - date: 14 July, 2026
   headline: "Plale Lab website launched"

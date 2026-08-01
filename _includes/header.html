@@ -14,9 +14,20 @@
           <a class="nav-link{% if page.url == '/' %} active{% endif %}" href="{{ site.url }}{{ site.baseurl }}/">Home</a>
         </li>
         {% for nav in site.nav_pages %}
+        {% if nav.children %}
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle{% if page.url contains nav.name %} active{% endif %}" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">{{ nav.name | capitalize }}</a>
+          <ul class="dropdown-menu">
+            {% for child in nav.children %}
+            <li><a class="dropdown-item" href="{{ site.url }}{{ site.baseurl }}{{ child.url }}">{{ child.name }}</a></li>
+            {% endfor %}
+          </ul>
+        </li>
+        {% else %}
         <li class="nav-item">
           <a class="nav-link{% if page.url contains nav.name %} active{% endif %}" href="{{ site.url }}{{ site.baseurl }}/{{ nav.name }}/">{{ nav.name | capitalize }}</a>
         </li>
+        {% endif %}
         {% endfor %}
       </ul>
     </div>

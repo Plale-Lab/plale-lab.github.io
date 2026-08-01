@@ -9,10 +9,23 @@
 }
 
 .research-card {
+  position: relative;
   background-color: var(--bg-card);
   border: 1px solid var(--border-color);
   border-radius: var(--radius-md);
   overflow: hidden;
+}
+
+.research-card-link {
+  transition: border-color var(--transition-fast);
+
+  &:hover {
+    border-color: var(--text-muted);
+
+    .research-more {
+      color: var(--text-primary);
+    }
+  }
 
   .research-thumb {
     width: 100%;
@@ -37,5 +50,24 @@
     font-size: 0.875rem;
     color: var(--text-secondary);
     line-height: 1.7;
+    margin-bottom: 0;
+  }
+
+  .research-more {
+    display: inline-block;
+    margin-top: var(--space-3);
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    transition: color var(--transition-fast);
+
+    // Stretches to cover the whole card, so the entire card is clickable
+    // while keeping the <a> itself a plain inline element (kramdown can't
+    // parse an <a> that wraps block-level content like .research-body).
+    &::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+    }
   }
 }
