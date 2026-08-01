@@ -50,19 +50,15 @@
   }
 }
 
-// Year badge — accent pill floated right
+// Year badge — plain muted text, floated right
 .year-badge {
   display: inline-block;
   float: right;
   font-family: 'DM Sans', sans-serif;
   font-size: 0.6875rem;
   font-weight: 700;
-  letter-spacing: 0.04em;
-  padding: 0.15rem 0.625rem;
-  border-radius: var(--radius-full);
-  background-color: var(--accent-light);
-  color: var(--accent);
-  border: 1px solid var(--accent);
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
   margin-left: var(--space-3);
   margin-top: var(--space-1);
 }
@@ -131,20 +127,20 @@
 // Search bar
 .pub-search {
   width: 100%;
-  padding: var(--space-3) var(--space-4);
-  border: 1px solid var(--border-color);
-  border-radius: var(--radius-full);
-  background-color: var(--bg-card);
+  padding: var(--space-3) 0;
+  border: none;
+  border-bottom: 1px solid var(--border-color);
+  border-radius: 0;
+  background-color: transparent;
   color: var(--text-primary);
   font-family: 'DM Sans', sans-serif;
   font-size: 0.875rem;
   margin-bottom: var(--space-6);
-  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+  transition: border-color var(--transition-fast);
 
   &:focus {
     outline: none;
-    border-color: var(--accent);
-    box-shadow: 0 0 0 3px var(--accent-light);
+    border-bottom-color: var(--text-primary);
   }
 
   &::placeholder {

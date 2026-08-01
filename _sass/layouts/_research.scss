@@ -9,31 +9,16 @@
 }
 
 .research-card {
-  background: linear-gradient(
-    160deg,
-    var(--bg-card) 0%,
-    var(--bg-secondary) 100%
-  );
+  background-color: var(--bg-card);
   border: 1px solid var(--border-color);
-  border-radius: var(--radius-xl);
+  border-radius: var(--radius-md);
   overflow: hidden;
-  transition: box-shadow var(--transition-slow), transform var(--transition-slow);
-
-  &:hover {
-    box-shadow: var(--shadow-lg);
-    transform: translateY(-3px);
-  }
 
   .research-thumb {
     width: 100%;
     height: 200px;
     object-fit: cover;
     border-radius: 0;
-    transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
-  }
-
-  &:hover .research-thumb {
-    transform: scale(1.04);
   }
 
   .research-body {

@@ -39,6 +39,7 @@ $baseurl: "{{ site.url }}{{ site.baseurl }}";
 @import "components/profile";
 @import "components/publication";
 @import "components/chips";
+@import "components/page-banner";
 
 // Layouts
 @import "layouts/grid";
@@ -47,5 +48,4 @@ $baseurl: "{{ site.url }}{{ site.baseurl }}";
 @import "layouts/research";
 
 // Utilities
-@import "utilities/dark-mode";
 @import "utilities/animations";

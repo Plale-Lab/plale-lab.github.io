@@ -4,11 +4,13 @@
 
 .btn-pill {
   display: inline-block;
-  padding: 0.25rem 0.875rem;
+  padding: 0.25rem 0.75rem;
   font-size: 0.75rem;
   font-weight: 600;
-  border-radius: var(--radius-full);
-  border: 1px solid transparent;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-color);
+  background-color: transparent;
+  color: var(--text-secondary);
   cursor: pointer;
   transition: all var(--transition-fast);
   text-decoration: none;
@@ -16,51 +18,9 @@
   text-transform: uppercase;
   letter-spacing: 0.04em;
 
-  &.btn-pdf {
-    background-color: var(--accent);
-    color: #fff;
-    &:hover { background-color: var(--accent-hover); color: #fff; }
-  }
-
-  &.btn-doi {
-    background-color: var(--text-primary);
-    color: var(--bg-primary);
-    &:hover { opacity: 0.85; color: var(--bg-primary); }
-  }
-
-  &.btn-arxiv {
-    background-color: #b31b1b;
-    color: #fff;
-    &:hover { background-color: #8c1515; color: #fff; }
-  }
-
-  &.btn-bib,
-  &.btn-abstract {
-    background-color: transparent;
-    color: var(--text-secondary);
-    border-color: var(--border-color);
-    &:hover {
-      border-color: var(--accent);
-      color: var(--accent);
-    }
-  }
-
-  &.btn-website {
-    background-color: var(--accent);
-    color: #fff;
-    &:hover { background-color: var(--accent-hover); color: #fff; }
-  }
-
-  &.btn-git {
-    background-color: var(--text-primary);
-    color: var(--bg-primary);
-    &:hover { opacity: 0.85; color: var(--bg-primary); }
-  }
-
-  &.btn-paper {
-    background-color: #b31b1b;
-    color: #fff;
-    &:hover { background-color: #8c1515; color: #fff; }
+  &:hover {
+    border-color: var(--text-primary);
+    color: var(--text-primary);
   }
 }
 
@@ -76,7 +36,7 @@
   font-size: 1.125rem;
 
   &:hover {
-    color: var(--accent);
-    background-color: var(--accent-light);
+    color: var(--text-primary);
+    background-color: var(--bg-secondary);
   }
 }

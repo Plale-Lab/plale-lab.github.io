@@ -22,7 +22,6 @@ links:
 # STEP 3: Site Settings
 # ============================================================
 accent_color: "#2E9C93"      # PlaleLab brand teal (from logos/)
-dark_mode: true              # show dark mode toggle in navbar
 description: "Plale Lab — Traceable Intelligence. Data and Information Management in AI, University of Oregon"
 baseurl: ""
 url: "https://plale-lab.github.io"

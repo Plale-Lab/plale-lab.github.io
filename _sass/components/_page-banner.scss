@@ -1,0 +1,32 @@
+// =============================================================
+// Page banner — solid block with centered page title
+// =============================================================
+
+.page-banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 220px;
+  // Break out of .site-container to go edge-to-edge, flush under the navbar.
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  margin-top: calc(-1 * var(--space-8));
+  margin-bottom: var(--space-8);
+  background-color: var(--text-primary);
+
+  .page-banner-title {
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-weight: 400;
+    font-size: 1.125rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+  }
+
+  @media (max-width: 640px) {
+    height: 140px;
+  }
+}
