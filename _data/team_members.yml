@@ -1,13 +1,15 @@
 # Current students and researchers.
 # Each entry needs: name, photo
-# Optional: info, email, website, scholar, github, orcid, researchgate, cv
+# Optional: info, bio, photo_position, email, website, scholar, linkedin,
+# github, orcid, researchgate, cv
 
 - name: Beth Plale
-  photo: team/beth-plale.svg
+  photo: team/beth-plale.webp
   info: Principal Investigator
   email: plale@uoregon.edu
   website: https://bethplale.com/
   scholar: https://scholar.google.com/citations?user=CyGvFJkAAAAJ
+  linkedin: https://www.linkedin.com/in/bethplale/
   orcid: https://orcid.org/0000-0003-2164-8132
 
 - name: Neelesh Karthikeyan
@@ -16,11 +18,16 @@
 - name: Manikya Swathi Vallabhajosyula
   photo: team/manikya-swathi-vallabhajosyula.svg
 
-- name: Agulugaha Isuru Madhushanka Gamage
-  photo: team/isuru-gamage.svg
+- name: Isuru Gamage
+  photo: team/isuru-gamage.webp
+  info: Graduate Research Assistant, Indiana University Bloomington
+  bio: "I am a Graduate Research Assistant in the Plale Lab while pursuing a master's degree in Intelligent Systems Engineering (Computer Engineering) at Indiana University Bloomington. I have over three years of professional software engineering experience and active research experience in machine learning systems, distributed computing, edge-cloud computing, and serverless AI inference. I have contributed to several research projects, including Patra ModelCards, the CKN MQTT framework, and DYSCI (Dynamic Speculative Cascading for Serverless Model Inference). My research interests include machine learning systems, distributed systems, cloud computing, serverless computing, high-performance computing, and edge-cloud AI systems."
+  scholar: https://scholar.google.com/citations?view_op=list_works&hl=en&authuser=1&user=FRq0zyAAAAAJ
+  linkedin: https://www.linkedin.com/in/itsisuru/
+  github: https://github.com/isurugamage37
 
 - name: William Qiu
-  photo: team/william-qiu.svg
+  photo: team/william-qiu.webp
 
 - name: Ellen Thompson
   photo: team/ellen-thompson.svg
