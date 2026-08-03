@@ -53,3 +53,32 @@
       url: https://doi.org/10.5281/zenodo.16625522
   featured: true
   order: 4
+
+- name: NSF ICICLE AI Institute
+  short_name: ICICLE
+  stage: Infrastructure
+  summary: "The Plale Lab has been a leader in the NSF ICICLE AI Institute since its inception in 2021, helping advance accessible and trustworthy AI cyberinfrastructure."
+  evidence: "The institute's unified services and training resources make shared cyberinfrastructure easier to discover and use."
+  links:
+    - label: Institute
+      url: https://icicle.osu.edu/
+    - label: Services board
+      url: https://icicleai.tapis.io/#/home
+    - label: Training catalog
+      url: https://icicle-ai.github.io/training-catalog/
+  featured: true
+  order: 5
+
+- name: "We're active!"
+  stage: Community
+  summary: "The Plale Lab participates in the CENTRA Consortium, endorses the FAIR Digital Objects approach, and contributes to international data governance through Beth Plale's service on the DONA Foundation Board of Directors."
+  evidence: "Research infrastructure connects technical systems with international standards, partnerships, and governance."
+  links:
+    - label: CENTRA
+      url: https://www.globalcentra.org/
+    - label: FAIR Digital Objects
+      url: https://fairdo.org/
+    - label: DONA board
+      url: https://www.dona.net/board
+  featured: true
+  order: 6
