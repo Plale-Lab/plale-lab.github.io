@@ -30,7 +30,16 @@ Approved artwork lives in `images/brand/`. Keep the existing filenames when repl
 
 ## Local production build and preview
 
-From the repository root, build with the same Ruby version used by GitHub Actions:
+From the repository root, install the Ruby dependencies and run Jekyll directly:
+
+```shell
+bundle install
+bundle exec jekyll serve
+```
+
+Then open `http://127.0.0.1:4000/`.
+
+If Ruby is unavailable locally, Docker can provide the same Ruby 3.2 environment used by GitHub Actions. The following PowerShell fallback writes the production build to `_site` and serves it on port 4100:
 
 ```powershell
 $siteRoot = (Get-Location).Path

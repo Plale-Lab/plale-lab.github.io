@@ -1,10 +1,10 @@
 # PlaleLab Website Development Log
 
-> Branch: `feat/plalelab-site-v1`  
-> Baseline: `source@9647725`  
-> Started: 2026-07-31  
-> Plan: `D:\github\icicle\website development plan v1.md`  
-> Visual source: `D:\github\icicle\global art documentation v1.md`
+> Branch: `agent/reconcile-plalelab-site-v1`
+> Baseline: `source@4789619`
+> Started: 2026-07-31
+> Plan: project planning document supplied by the site maintainer
+> Visual source: project art-direction document supplied by the site maintainer
 
 ## Working theses
 
@@ -34,7 +34,7 @@ PlaleLab is presented as a warm scientific editorial surface crossed by a precis
 
 **Actions**
 
-- Cloned `https://github.com/Plale-Lab/plale-lab.github.io` into `D:\github\plale-lab.github.io`.
+- Cloned `https://github.com/Plale-Lab/plale-lab.github.io` into a local working directory.
 - Confirmed default working branch `source` at commit `9647725`.
 - Created feature branch `feat/plalelab-site-v1`.
 - Confirmed clean worktree before edits.
@@ -68,7 +68,7 @@ PlaleLab is presented as a warm scientific editorial surface crossed by a precis
 
 **Actions**
 
-- Copied the approved primary, reverse, black, white, icon, and social artwork from `C:\Users\izayo\Downloads\PlaleLab-delivery` into `images/brand/`.
+- Copied the approved primary, reverse, black, white, icon, and social artwork from the supplied brand delivery into `images/brand/`.
 - Replaced the favicon with the approved small PlaleLab mark.
 - Added structured project data in `_data/projects.yml`; every featured project has at least two concrete destinations.
 - Reworked `_data/news.yml` as a curated research, evidence-release, and lab-milestone stream.
@@ -280,4 +280,41 @@ PlaleLab is presented as a warm scientific editorial surface crossed by a precis
 | Replacement image | Pass | New WebP loads at 1800 × 1261; old Component Catalog image is absent |
 | Desktop News layout | Pass | Full screenshot renders uncropped at 702 × 492 with 0 px horizontal overflow |
 | Mobile News layout | Pass | 390 × 844 renders the screenshot at 346 × 242 with 0 px horizontal overflow |
-| Local preview | Ready | `http://127.0.0.1:4100/allnews.html`, process 44604 |
+| Local preview | Ready | News archive at the then-current local preview route |
+
+### 2026-08-04 â€” Phase 8: review reconciliation
+
+**Status:** complete
+
+**Upstream reconciliation**
+
+- Replayed the site work onto `source@4789619` in a new branch, leaving the original pull-request branch unchanged.
+- Manually reconciled the upstream research and contact routes with the new editorial design.
+- Restored Research and Contact in the primary navigation; Research uses a native, keyboard-accessible disclosure menu that works without Bootstrap JavaScript.
+- Consolidated the richer curated-news schema and renderer at the canonical `/news/` route.
+
+**Review resolutions**
+
+| Review concern | Resolution |
+|---|---|
+| Competing news schemas and routes | Retained the richer schema and one `/news/` archive; updated all internal references and the feed |
+| Duplicate alumni data | Merged prior affiliates into `_data/alumni.yml` and removed the second data file |
+| Team heading order | Added `Current members` as an `h2` and changed member names to `h3` |
+| Data rendered into HTML | Escaped review-identified project, team, header, footer, metadata, news, and profile fields |
+| Unused root-level logos | Removed the two superseded PNG assets; approved artwork remains in `images/brand/` |
+| Local build documentation | Made native Bundler/Jekyll commands primary and documented Docker as a fallback |
+| Machine-specific development paths | Replaced absolute workstation paths with portable descriptions and repository-relative paths |
+| Generic page-banner artwork | Replaced the placeholder image icon with the approved PlaleLab mark |
+
+**Verification**
+
+| Check | Result |
+|---|---|
+| JavaScript production build | Pass |
+| Ruby 3.2 Docker/Jekyll production build | Pass |
+| Generated internal links and assets | Pass; 0 broken references |
+| Desktop navigation | Pass at 1440 Ã— 900; Research disclosure opens and routes correctly |
+| Mobile navigation | Pass at 390 Ã— 844; navigation and Research submenu open with correct state |
+| Responsive overflow | Pass; 0 px on Home, Research, Team, News, and Contact checks |
+| Heading structure | Pass; one main `h1` on checked routes, with Team member cards under `h2`/`h3` headings |
+| Browser console | Pass; no warnings or errors during the mobile Team check |

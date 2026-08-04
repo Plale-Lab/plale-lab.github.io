@@ -2,10 +2,8 @@
 title: "News"
 layout: gridlay
 sitemap: false
-permalink: /allnews.html
+permalink: /news/
 ---
-
-# News
 
 <p class="page-lead">Selected publications, releases, collaborations, and milestones from across the lab.</p>
 

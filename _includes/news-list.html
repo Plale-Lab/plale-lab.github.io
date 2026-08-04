@@ -7,21 +7,21 @@
   <article class="news-item fade-in-section">
     <div class="news-item__meta">
       <time datetime="{{ article.date | date: '%Y-%m-%d' }}">{{ article.date | date: "%b %d, %Y" }}</time>
-      <span>{{ article.category }}</span>
+      <span>{{ article.category | escape }}</span>
     </div>
     <div class="news-item__body">
       {% if include.all %}<h2 class="news-item__title">{% else %}<h3 class="news-item__title">{% endif %}
-        {% if article.url %}<a href="{{ article.url }}">{{ article.headline | escape }}</a>{% else %}{{ article.headline | escape }}{% endif %}
+        {% if article.url %}<a href="{{ article.url | escape }}">{{ article.headline | escape }}</a>{% else %}{{ article.headline | escape }}{% endif %}
       {% if include.all %}</h2>{% else %}</h3>{% endif %}
       {% if article.summary %}<div class="news-item__summary">{{ article.summary | markdownify }}</div>{% endif %}
       {% if article.image %}
       <figure class="news-item__media">
-        {% if article.url %}<a href="{{ article.url }}" aria-label="Open {{ article.headline | escape }}">{% endif %}
+        {% if article.url %}<a href="{{ article.url | escape }}" aria-label="Open {{ article.headline | escape }}">{% endif %}
         <img src="{{ article.image | relative_url }}" alt="{{ article.image_alt | escape }}" loading="lazy" width="{{ article.image_width | default: 900 }}" height="{{ article.image_height | default: 545 }}">
         {% if article.url %}</a>{% endif %}
         {% if article.image_caption %}
         <figcaption>
-          {% if article.image_source %}<a href="{{ article.image_source }}">{{ article.image_caption }}</a>{% else %}{{ article.image_caption }}{% endif %}
+          {% if article.image_source %}<a href="{{ article.image_source | escape }}">{{ article.image_caption | escape }}</a>{% else %}{{ article.image_caption | escape }}{% endif %}
         </figcaption>
         {% endif %}
       </figure>

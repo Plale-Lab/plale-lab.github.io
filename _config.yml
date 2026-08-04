@@ -40,6 +40,14 @@ analytics:
 # STEP 4: Choose Your Pages (comment out any you don't need)
 # ============================================================
 nav_pages:
+  - name: research
+    label: Research
+    children:
+      - { name: "Computational & Data Infrastructure for AI", url: /research/computational-data-infrastructure/ }
+      - { name: "High Performance & Distributed Computing", url: /research/hpc-distributed-computing/ }
+      - { name: "Open Science", url: /research/open-science/ }
+      - { name: "Provenance & Reproducibility", url: /research/provenance-reproducibility/ }
+      - { name: "AI Ethics & Accountability", url: /research/ai-ethics-accountability/ }
   - name: team
     label: Team
     url: /team/
@@ -48,7 +56,10 @@ nav_pages:
     url: /publications/
   - name: news
     label: News
-    url: /allnews.html
+    url: /news/
+  - name: contact
+    label: Contact
+    url: /contact/
   # - name: talks        # not used for this lab site
   # - name: teaching     # not used for this lab site
   # - name: blogs        # not used for this lab site

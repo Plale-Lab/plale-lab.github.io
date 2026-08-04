@@ -58,7 +58,7 @@ permalink: /
           <p class="eyebrow">Selected signals</p>
           <h2 id="news-title">News</h2>
         </div>
-        <a href="{{ '/allnews.html' | relative_url }}">All news <span aria-hidden="true">→</span></a>
+        <a href="{{ '/news/' | relative_url }}">All news <span aria-hidden="true">→</span></a>
       </div>
       {% include news-list.html limit=3 %}
     </aside>

@@ -23,7 +23,7 @@ layout: null
       <title>{{ article.headline | xml_escape }}</title>
       <description>{{ article.headline | xml_escape }}</description>
       <pubDate>{{ article.date | date_to_rfc822 }}</pubDate>
-      <link>{{ site.url }}{{ site.baseurl }}/allnews.html</link>
+      <link>{{ '/news/' | absolute_url }}</link>
     </item>
     {% endfor %}
   </channel>

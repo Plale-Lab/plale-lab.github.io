@@ -84,6 +84,67 @@
   }
 }
 
+.nav-item--dropdown { position: relative; }
+
+.nav-dropdown {
+  position: relative;
+
+  summary {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    gap: var(--space-2);
+    list-style: none;
+  }
+
+  summary::-webkit-details-marker { display: none; }
+
+  summary::before {
+    border-bottom: 0;
+    border-left: 0.25rem solid transparent;
+    border-right: 0.25rem solid transparent;
+    border-top: 0.3rem solid currentColor;
+    content: '';
+    height: 0;
+    order: 2;
+    transition: transform var(--transition-fast);
+    width: 0;
+  }
+
+  &[open] summary::before { transform: rotate(180deg); }
+  &.active > summary { color: var(--accent) !important; }
+}
+
+.nav-dropdown__menu {
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+  left: 0;
+  list-style: none;
+  margin: var(--space-2) 0 0;
+  min-width: 20rem;
+  padding: var(--space-2);
+  position: absolute;
+  top: 100%;
+}
+
+.nav-dropdown__link {
+  border-radius: var(--radius-sm);
+  color: var(--text-secondary);
+  display: block;
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: var(--space-3);
+
+  &:hover,
+  &:focus,
+  &.active {
+    background: var(--accent-light);
+    color: var(--accent);
+  }
+}
+
 .nav-actions { gap: var(--space-2); }
 
 .nav-github {
@@ -138,7 +199,7 @@
   min-width: 2.75rem;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 991px) {
   .navbar { padding-inline: var(--space-3); }
 
   .navbar-brand { margin-right: 0; }
@@ -150,6 +211,22 @@
   }
 
   .navbar-nav { gap: var(--space-1); }
+
+  .nav-dropdown__menu {
+    border: 0;
+    border-left: 1px solid var(--border-color);
+    border-radius: 0;
+    box-shadow: none;
+    margin: 0 0 var(--space-2) var(--space-4);
+    min-width: 0;
+    padding: 0 0 0 var(--space-2);
+    position: static;
+  }
+
+  .nav-dropdown__link {
+    font-size: 0.88rem;
+    padding: var(--space-2) var(--space-3);
+  }
 
   .nav-link {
     font-size: 0.95rem;

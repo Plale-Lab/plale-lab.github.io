@@ -19,7 +19,7 @@
 
     navMenu.querySelectorAll('a').forEach(function (link) {
       link.addEventListener('click', function () {
-        if (window.matchMedia('(max-width: 767px)').matches) {
+        if (window.matchMedia('(max-width: 991px)').matches) {
           navMenu.classList.remove('show');
           navToggle.setAttribute('aria-expanded', 'false');
         }

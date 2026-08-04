@@ -1,5 +1,15 @@
-# Former lab members.
-# Each entry needs: name, duration, info
-# Optional: photo, email
-#
-# No alumni recorded yet.
+# Former lab members and prior affiliates.
+# Each entry needs a name. Add only verified optional fields such as
+# duration, info, photo, email, or linkedin.
+
+- name: Sachith Withana
+  linkedin: https://www.linkedin.com/in/sachithwithana/
+
+- name: Krishna Priya
+  linkedin: https://www.linkedin.com/in/krshnpriya/
+
+- name: Winona Snapp-Childs
+  linkedin: https://www.linkedin.com/in/winona-snapp-childs-b1b3543/
+
+- name: Sai Navya Jyesta
+  linkedin: https://www.linkedin.com/in/sainavyajyesta/

@@ -3,8 +3,8 @@
     <div class="footer-brand">
       <a href="{{ '/' | relative_url }}" aria-label="PlaleLab home"><img src="{{ '/images/brand/plalelab-icon.svg' | relative_url }}" alt=""></a>
       <div>
-        <strong>{{ site.lab_name | default: site.name }}</strong>
-        <p>{{ site.lab_tagline }}<br>{{ site.institution }}</p>
+        <strong>{{ site.lab_name | default: site.name | escape }}</strong>
+        <p>{{ site.lab_tagline | escape }}<br>{{ site.institution | escape }}</p>
       </div>
     </div>
     <div>
@@ -12,14 +12,14 @@
       <nav aria-label="Footer navigation">
         <a href="{{ '/team/' | relative_url }}">Team</a>
         <a href="{{ '/publications/' | relative_url }}">Publications</a>
-        <a href="{{ '/allnews.html' | relative_url }}">News</a>
+        <a href="{{ '/news/' | relative_url }}">News</a>
         <a href="{{ site.links.github }}">GitHub</a>
       </nav>
     </div>
     <div>
       <p class="footer-heading">Connect</p>
       <nav aria-label="Lab contact links">
-        <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+        <a href="mailto:{{ site.email | escape }}">{{ site.email | escape }}</a>
         <a href="{{ site.links.google_scholar }}">Google Scholar</a>
         <a href="https://bethplale.com/">Beth Plale</a>
         <a href="https://www.uoregon.edu/">University of Oregon</a>
