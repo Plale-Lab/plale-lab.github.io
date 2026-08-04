@@ -11,13 +11,13 @@
     </div>
     <div class="news-item__body">
       {% if include.all %}<h2 class="news-item__title">{% else %}<h3 class="news-item__title">{% endif %}
-        {% if article.url %}<a href="{{ article.url }}">{{ article.headline }}</a>{% else %}{{ article.headline }}{% endif %}
+        {% if article.url %}<a href="{{ article.url }}">{{ article.headline | escape }}</a>{% else %}{{ article.headline | escape }}{% endif %}
       {% if include.all %}</h2>{% else %}</h3>{% endif %}
-      {% if article.summary %}<p>{{ article.summary }}</p>{% endif %}
+      {% if article.summary %}<div class="news-item__summary">{{ article.summary | markdownify }}</div>{% endif %}
       {% if article.image %}
       <figure class="news-item__media">
-        {% if article.url %}<a href="{{ article.url }}" aria-label="Open {{ article.headline }}">{% endif %}
-        <img src="{{ article.image | relative_url }}" alt="{{ article.image_alt }}" loading="lazy" width="900" height="545">
+        {% if article.url %}<a href="{{ article.url }}" aria-label="Open {{ article.headline | escape }}">{% endif %}
+        <img src="{{ article.image | relative_url }}" alt="{{ article.image_alt | escape }}" loading="lazy" width="{{ article.image_width | default: 900 }}" height="{{ article.image_height | default: 545 }}">
         {% if article.url %}</a>{% endif %}
         {% if article.image_caption %}
         <figcaption>
