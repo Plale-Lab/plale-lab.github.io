@@ -1,0 +1,84 @@
+# Featured work shown on the homepage.
+# Each project needs a name, stage, summary, evidence cue, and at least two links.
+
+- name: Patra ModelCards
+  stage: Accountability
+  summary: "Lifecycle model cards that capture structured metadata, fairness, explainability, version relationships, and deployment history as machine-actionable records."
+  evidence: "Model documentation stays connected to how a model is trained, revised, and used."
+  links:
+    - label: Documentation
+      url: https://patra-toolkit.readthedocs.io/en/latest/
+    - label: Toolkit
+      url: https://github.com/Plale-Lab/patra-toolkit
+    - label: Knowledge base
+      url: https://github.com/Plale-Lab/patra-knowledge-base
+  featured: true
+  order: 1
+
+- name: Cyberinfrastructure Knowledge Network
+  short_name: CKN
+  stage: Infrastructure
+  summary: "A distributed framework connecting edge devices and cloud services through event streams, historical performance data, and adaptive AI-model deployment."
+  evidence: "Runtime observations connect edge decisions back to model provenance."
+  links:
+    - label: Documentation
+      url: https://cyberinfrastructure-knowledge-network.readthedocs.io/en/latest/
+    - label: GitHub
+      url: https://github.com/Plale-Lab/cyberinfrastructure-knowledge-network
+    - label: Paper
+      url: https://ieeexplore.ieee.org/document/10254827
+  featured: true
+  order: 2
+
+- name: Auditable Metadata Augmentation
+  stage: Metadata
+  summary: "A multi-pass approach for augmenting model cards and datasheets while preserving the prompts, methods, corpus manifests, and aggregate evaluation behind each result."
+  evidence: "The artifact package exposes the full path from method to evaluation."
+  links:
+    - label: Artifacts
+      url: https://github.com/Plale-Lab/patra-metadata-augmentation-study
+    - label: Results
+      url: https://github.com/Plale-Lab/patra-metadata-augmentation-study/blob/main/aggregate-results.md
+  featured: true
+  order: 3
+
+- name: NexusLLM / Patra-RGCN
+  stage: Evidence
+  summary: "Knowledge-graph research that studies missing relationships in model-card graphs and uses structured node properties to improve link prediction."
+  evidence: "Code and a DOI-referenced dataset make the evaluation path inspectable."
+  links:
+    - label: GitHub
+      url: https://github.com/Plale-Lab/NexusLLM
+    - label: Dataset
+      url: https://doi.org/10.5281/zenodo.16625522
+  featured: true
+  order: 4
+
+- name: NSF ICICLE AI Institute
+  short_name: ICICLE
+  stage: Infrastructure
+  summary: "The Plale Lab has been a leader in the NSF ICICLE AI Institute since its inception in 2021, helping advance accessible and trustworthy AI cyberinfrastructure."
+  evidence: "The institute's unified services and training resources make shared cyberinfrastructure easier to discover and use."
+  links:
+    - label: Institute
+      url: https://icicle.osu.edu/
+    - label: Services board
+      url: https://icicleai.tapis.io/#/home
+    - label: Training catalog
+      url: https://icicle-ai.github.io/training-catalog/
+  featured: true
+  order: 5
+
+- name: "We're active!"
+  stage: Community
+  summary: "The Plale Lab participates in the CENTRA Consortium, endorses the FAIR Digital Objects approach, and contributes to international data governance through Beth Plale's service on the DONA Foundation Board of Directors."
+  evidence: "Research infrastructure connects technical systems with international standards, partnerships, and governance."
+  links:
+    - label: CENTRA
+      url: https://www.globalcentra.org/
+    - label: FAIR Digital Objects
+      url: https://fairdo.org/
+    - label: DONA board
+      url: https://www.dona.net/board
+  featured: true
+  order: 6

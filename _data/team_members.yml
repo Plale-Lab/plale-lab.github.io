@@ -1,25 +1,43 @@
 # Current students and researchers.
 # Each entry needs: name, photo
-# Optional: info, email, website, scholar, github, researchgate, cv
+# Optional: info, bio, photo_position, email, website, scholar, linkedin,
+# github, orcid, researchgate, cv
 
 - name: Beth Plale
-  photo: team/beth-plale.svg
+  photo: team/beth-plale.webp
   info: Principal Investigator
   email: plale@uoregon.edu
   website: https://bethplale.com/
   scholar: https://scholar.google.com/citations?user=CyGvFJkAAAAJ
+  linkedin: https://www.linkedin.com/in/bethplale/
+  orcid: https://orcid.org/0000-0003-2164-8132
 
 - name: Neelesh Karthikeyan
-  photo: team/neelesh-karthikeyan.svg
+  photo: team/neelesh-karthikeyan.webp
+  scholar: https://scholar.google.com/citations?user=1pBbOw0AAAAJ&hl=en
+  linkedin: https://www.linkedin.com/in/neelk/
+  github: https://github.com/nee1k
 
 - name: Manikya Swathi Vallabhajosyula
-  photo: team/manikya-swathi-vallabhajosyula.svg
+  photo: team/manikya-swathi-vallabhajosyula.webp
+  bio: "Manikya Swathi Vallabhajosyula (Swathi) holds a Ph.D. in Computer Science and Engineering from The Ohio State University, where she worked with Rajiv Ramnath on AI-integrated cyberinfrastructure by building a resource-aware software toolkit that helps scientists run workflows efficiently on HPC clusters. Her research spans HPC resource prediction (HARP), intelligent scheduling of AI workloads across edge and center (Smart Scheduler), and tools that let non-ML experts deploy models in the field (ML Field Planner). Her doctoral work was supported by the NSF ICICLE AI Institute, and she was an SGX3 Summer Fellow at TACC, UT Austin. She previously earned an M.S. in Computer Science from the University of Minnesota Duluth and spent four years in industry at CA Technologies and Spherexx.com. She is a two-time PEARC Best Paper awardee (2023, 2025), both recognized with the Phil Andrews Award for Best Paper Overall, and received OSU's Best Graduate Student Research Award in the Computer Science and Engineering Department in 2026."
+  website: https://manikyaswathi.github.io/
+  linkedin: https://www.linkedin.com/in/manikyaswathivallabhajosyula
+  orcid: https://orcid.org/0000-0002-9094-1722
 
-- name: Agulugaha Isuru Madhushanka Gamage
-  photo: team/isuru-gamage.svg
+- name: Isuru Gamage
+  photo: team/isuru-gamage.webp
+  info: Graduate Research Assistant, Indiana University Bloomington
+  bio: "I am a Graduate Research Assistant in the Plale Lab while pursuing a master's degree in Intelligent Systems Engineering (Computer Engineering) at Indiana University Bloomington. I have over three years of professional software engineering experience and active research experience in machine learning systems, distributed computing, edge-cloud computing, and serverless AI inference. I have contributed to several research projects, including Patra ModelCards, the CKN MQTT framework, and DYSCI (Dynamic Speculative Cascading for Serverless Model Inference). My research interests include machine learning systems, distributed systems, cloud computing, serverless computing, high-performance computing, and edge-cloud AI systems."
+  scholar: https://scholar.google.com/citations?view_op=list_works&hl=en&authuser=1&user=FRq0zyAAAAAJ
+  linkedin: https://www.linkedin.com/in/itsisuru/
+  github: https://github.com/isurugamage37
 
-- name: William Qiu
-  photo: team/william-qiu.svg
+- name: 'Zhongyi "William" Qiu'
+  photo: team/william-qiu.webp
+  bio: "I am a PhD student and AI systems researcher working on trustworthy, secure, and reproducible intelligent systems. My interests span large language models, AI ethics, cybersecurity, open-source software, human-computer interaction, and the relationship between technology, cognition, and society."
+  website: https://williamq96.github.io/
+  linkedin: https://www.linkedin.com/in/williamq96
 
 - name: Ellen Thompson
   photo: team/ellen-thompson.svg

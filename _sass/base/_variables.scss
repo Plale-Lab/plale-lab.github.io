@@ -1,31 +1,35 @@
 // =============================================================
-// Design Tokens — Minimal Editorial (zwickergroup.org reference)
+// PlaleLab design tokens — Evidence in Motion
 // =============================================================
 
 :root {
-  // Accent — used sparingly, link color only
-  --accent: #1a7a6d;
-  --accent-hover: #15655a;
-  --accent-light: rgba(26, 122, 109, 0.08);
+  color-scheme: light;
 
-  // Light parchment page background, flat white cards/charcoal text elsewhere
-  --bg-primary: #f8f6f1;
-  --bg-secondary: #f0ece4;
+  --brand-ink: #123c35;
+  --brand-teal: #2fa89a;
+  --brand-evidence: #b7d64a;
+
+  --bg-primary: #f4f7f2;
+  --bg-secondary: #e8f1ed;
   --bg-card: #ffffff;
-  --text-primary: #262626;
-  --text-secondary: #595959;
-  --text-muted: #8c8c8c;
-  --border-color: #e5e5e5;
-  --shadow-sm: none;
-  --shadow-md: 0 1px 2px rgba(0, 0, 0, 0.05);
-  --shadow-lg: 0 2px 6px rgba(0, 0, 0, 0.06);
-  --shadow-navbar: 0 1px 2px rgba(0, 0, 0, 0.04);
+  --text-primary: #123c35;
+  --text-secondary: #3f5d56;
+  --text-muted: #5e726b;
+  --border-color: #d7e2dd;
+  --accent: #176f66;
+  --accent-hover: #0e5b53;
+  --accent-light: rgba(47, 168, 154, 0.12);
+  --focus-color: #2fa89a;
 
-  // Layout
-  --container-max: 1100px;
+  --shadow-sm: 0 2px 8px rgba(18, 60, 53, 0.05);
+  --shadow-md: 0 8px 24px rgba(18, 60, 53, 0.08);
+  --shadow-lg: 0 18px 48px rgba(7, 27, 23, 0.14);
+  --shadow-navbar: 0 1px 0 rgba(18, 60, 53, 0.08);
+
+  --container-max: 1180px;
   --container-padding: 1.5rem;
+  --header-height: 4.25rem;
 
-  // Spacing scale
   --space-1: 0.25rem;
   --space-2: 0.5rem;
   --space-3: 0.75rem;
@@ -35,16 +39,41 @@
   --space-10: 2.5rem;
   --space-12: 3rem;
   --space-16: 4rem;
+  --space-24: 6rem;
 
-  // Border radius — near-square, matches the flat reference look
-  --radius-sm: 0.125rem;
-  --radius-md: 0.1875rem;
-  --radius-lg: 0.25rem;
-  --radius-xl: 0.25rem;
+  --radius-xs: 0.25rem;
+  --radius-sm: 0.375rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
   --radius-full: 9999px;
 
-  // Transitions
-  --transition-fast: 150ms ease;
-  --transition-base: 250ms ease;
-  --transition-slow: 400ms cubic-bezier(0.22, 1, 0.36, 1);
+  --transition-fast: 140ms ease;
+  --transition-base: 180ms ease;
+  --transition-slow: 280ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+[data-bs-theme="dark"] {
+  color-scheme: dark;
+
+  --brand-ink: #f1f6f3;
+  --brand-teal: #63cfc2;
+  --brand-evidence: #c7e568;
+
+  --bg-primary: #0c211d;
+  --bg-secondary: #183b35;
+  --bg-card: #12312b;
+  --text-primary: #f1f6f3;
+  --text-secondary: #b8cbc4;
+  --text-muted: #8da39b;
+  --border-color: #2b5047;
+  --accent: #63cfc2;
+  --accent-hover: #8adfd5;
+  --accent-light: rgba(99, 207, 194, 0.12);
+  --focus-color: #63cfc2;
+
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.2);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.26);
+  --shadow-lg: 0 18px 48px rgba(0, 0, 0, 0.38);
+  --shadow-navbar: 0 1px 0 rgba(99, 207, 194, 0.12);
 }

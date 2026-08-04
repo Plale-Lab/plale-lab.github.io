@@ -1,6 +1,42 @@
-# News items shown on the /news/ page, most recent first.
-# Each entry needs: date, headline
-# Optional: category (short tag, e.g. "Announcement", "Publication", "Positions")
-# Optional: body (a longer paragraph shown under the headline)
-- date: 14 July, 2026
-  headline: "Plale Lab website launched"
+# Curated lab news. The homepage shows the first three featured entries.
+# Required: date (ISO), category, headline. Optional: summary, url, featured.
+
+- date: 2026-08-03
+  category: Infrastructure release
+  headline: "NSF ICICLE AI Institute releases its unified services board"
+  summary: "Every ICICLE service on one board. Find domain agnostic ICICLE AI-as-a-Service and CI-as-a-Service offerings as well as domain specific AI services. You can find it all at [icicleai.tapis.io](https://icicleai.tapis.io/) though you’ll need to log in with your Tapis ID to get started. Our code is open — dig through it all at [github.com/ICICLE-ai](https://github.com/ICICLE-ai)."
+  url: https://icicleai.tapis.io/#/home
+  image: /images/news/icicle-unified-services-board.webp
+  image_alt: "ICICLE Unified Services Board listing domain-agnostic AI and cyberinfrastructure services and domain-specific service catalogs"
+  image_width: 1800
+  image_height: 1261
+  image_caption: "ICICLE Unified Services Board"
+  image_source: https://icicleai.tapis.io/
+  featured: true
+
+- date: 2026-07-31
+  category: Evidence release
+  headline: "Auditable metadata augmentation artifacts are now available"
+  summary: "Prompts, method descriptions, corpus manifests, and aggregate results make the evaluation path inspectable."
+  url: https://github.com/Plale-Lab/patra-metadata-augmentation-study
+  featured: true
+
+- date: 2026-07-31
+  category: Research
+  headline: "A new HPC-to-edge workflow connects model testing and deployment"
+  summary: "The PEARC '26 work brings ML Field Planner, Patra, and CKN into one reproducible deployment path."
+  url: https://doi.org/10.1145/3785462.3815843
+  featured: true
+
+- date: 2024-09-19
+  category: Publication
+  headline: "Patra ModelCards presented at IEEE e-Science 2024"
+  summary: "The paper introduces model cards as evolving accountability objects in the edge-cloud continuum."
+  url: https://doi.org/10.1109/e-Science62913.2024.10678710
+  featured: true
+
+- date: 2026-07-14
+  category: Lab update
+  headline: "The PlaleLab website launched"
+  summary: "A public home for the lab's projects, people, publications, and open research artifacts."
+  featured: false

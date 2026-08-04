@@ -1,0 +1,17 @@
+{% assign project = include.project %}
+<article class="project-entry fade-in-section">
+  <div class="project-entry__meta">
+    <span class="project-entry__index" aria-hidden="true">0{{ include.index }}</span>
+    <span class="project-entry__stage">{{ project.stage | escape }}</span>
+  </div>
+  <div class="project-entry__body">
+    <h3>{{ project.name | escape }}</h3>
+    <p class="project-entry__summary">{{ project.summary | escape }}</p>
+    <p class="project-entry__evidence"><span aria-hidden="true"></span>{{ project.evidence | escape }}</p>
+    <nav class="project-entry__links" aria-label="{{ project.name | escape }} resources">
+      {% for link in project.links %}
+      <a href="{{ link.url | escape }}">{{ link.label | escape }} <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+      {% endfor %}
+    </nav>
+  </div>
+</article>

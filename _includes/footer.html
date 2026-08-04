@@ -1,39 +1,35 @@
 <footer class="site-footer">
   <div class="footer-grid">
-    <div>
-      <h5>About</h5>
-      <p>
-        {{ site.lab_name | default: site.name }}<br>
-        {{ site.lab_tagline }}<br>
-        {{ site.institution }}
-      </p>
-      <p style="margin-top: var(--space-2);">
-        <strong>Principal Investigator:</strong><br>
-        {{ site.name }}, {{ site.title }}
-      </p>
+    <div class="footer-brand">
+      <a href="{{ '/' | relative_url }}" aria-label="PlaleLab home"><img src="{{ '/images/brand/plalelab-icon.svg' | relative_url }}" alt=""></a>
+      <div>
+        <strong>{{ site.lab_name | default: site.name | escape }}</strong>
+        <p>{{ site.lab_tagline | escape }}<br>{{ site.institution | escape }}</p>
+      </div>
     </div>
     <div>
-      <h5>Contact</h5>
-      <p>
-        <a href="mailto:{{ site.email }}"><i class="fa-solid fa-envelope"></i> {{ site.email }}</a><br>
-        {% if site.links.github and site.links.github != "" %}<a href="{{ site.links.github }}"><i class="fa-brands fa-github"></i> GitHub</a><br>{% endif %}
-      </p>
+      <p class="footer-heading">Explore</p>
+      <nav aria-label="Footer navigation">
+        <a href="{{ '/team/' | relative_url }}">Team</a>
+        <a href="{{ '/publications/' | relative_url }}">Publications</a>
+        <a href="{{ '/news/' | relative_url }}">News</a>
+        <a href="{{ site.links.github }}">GitHub</a>
+      </nav>
     </div>
     <div>
-      <h5>Links</h5>
-      <p>
-        {% if site.links.google_scholar and site.links.google_scholar != "" %}<a href="{{ site.links.google_scholar }}"><i class="ai ai-google-scholar"></i> Google Scholar</a><br>{% endif %}
-        {% if site.links.researchgate and site.links.researchgate != "" %}<a href="{{ site.links.researchgate }}"><i class="ai ai-researchgate"></i> ResearchGate</a><br>{% endif %}
-        <a href="https://github.com/sbryngelson/academic-website-template"><i class="fa-brands fa-github"></i> Use this template!</a>
-      </p>
+      <p class="footer-heading">Connect</p>
+      <nav aria-label="Lab contact links">
+        <a href="mailto:{{ site.email | escape }}">{{ site.email | escape }}</a>
+        <a href="{{ site.links.google_scholar }}">Google Scholar</a>
+        <a href="https://bethplale.com/">Beth Plale</a>
+        <a href="https://www.uoregon.edu/">University of Oregon</a>
+      </nav>
     </div>
   </div>
-  <div class="footer-grid">
-    <div class="footer-copyright" style="grid-column: 1 / -1;">
-      &copy; {{ "now" | date: "%Y" }} {{ site.lab_name | default: site.name | escape }}
-    </div>
+  <div class="footer-copyright">
+    <span>&copy; {{ "now" | date: "%Y" }} {{ site.lab_name | default: site.name | escape }}</span>
+    <span>Open research. Traceable evidence.</span>
   </div>
 </footer>
 
-<script src="{{ "/assets/javascript/bootstrap/bootstrap.bundle.min.js" | relative_url }}"></script>
 <script src="{{ "/assets/js/site.min.js" | relative_url }}"></script>

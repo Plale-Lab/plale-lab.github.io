@@ -1,10 +1,62 @@
 // =============================================================
-// site.js — Publication filter, toggles, scroll effects,
+// site.js — Dark mode, publication filter, toggles, scroll effects,
 //           copy bibtex, back-to-top, year badges
 // =============================================================
 
 (function () {
   'use strict';
+
+  // ----- Mobile Navigation -----
+
+  var navToggle = document.querySelector('.navbar-toggler');
+  var navMenu = document.getElementById('navbarNav');
+
+  if (navToggle && navMenu) {
+    navToggle.addEventListener('click', function () {
+      var isOpen = navMenu.classList.toggle('show');
+      navToggle.setAttribute('aria-expanded', String(isOpen));
+    });
+
+    navMenu.querySelectorAll('a').forEach(function (link) {
+      link.addEventListener('click', function () {
+        if (window.matchMedia('(max-width: 991px)').matches) {
+          navMenu.classList.remove('show');
+          navToggle.setAttribute('aria-expanded', 'false');
+        }
+      });
+    });
+  }
+
+  // ----- Dark Mode Toggle -----
+
+  var toggle = document.getElementById('darkModeToggle');
+  var icon = document.getElementById('themeIcon');
+
+  function updateIcon() {
+    if (!icon) return;
+    var theme = document.documentElement.getAttribute('data-bs-theme');
+    if (theme === 'dark') {
+      icon.className = 'fa-solid fa-sun';
+      toggle.setAttribute('aria-label', 'Switch to light mode');
+      toggle.setAttribute('title', 'Switch to light mode');
+    } else {
+      icon.className = 'fa-solid fa-moon';
+      toggle.setAttribute('aria-label', 'Switch to dark mode');
+      toggle.setAttribute('title', 'Switch to dark mode');
+    }
+  }
+
+  if (toggle) {
+    updateIcon();
+
+    toggle.addEventListener('click', function () {
+      var current = document.documentElement.getAttribute('data-bs-theme');
+      var next = current === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-bs-theme', next);
+      localStorage.setItem('theme', next);
+      updateIcon();
+    });
+  }
 
   // ----- Publication Expand/Collapse -----
 

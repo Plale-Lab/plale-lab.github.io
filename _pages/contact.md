@@ -10,10 +10,10 @@ permalink: /contact/
 <div class="section-card" markdown="0">
 
 <h4>Email</h4>
-<p><a href="mailto:{{ site.email }}"><i class="fa-solid fa-envelope"></i> {{ site.email }}</a></p>
+<p><a href="mailto:{{ site.email | escape }}"><i class="fa-solid fa-envelope"></i> {{ site.email | escape }}</a></p>
 
 <h4>Institution</h4>
-<p>{{ site.name }}, {{ site.title }}<br>{{ site.institution }}</p>
+<p>{{ site.name | escape }}, {{ site.title | escape }}<br>{{ site.institution | escape }}</p>
 
 {% if site.links.google_scholar and site.links.google_scholar != "" or site.links.github and site.links.github != "" or site.links.researchgate and site.links.researchgate != "" or site.links.orcid and site.links.orcid != "" or site.links.twitter and site.links.twitter != "" or site.links.linkedin and site.links.linkedin != "" %}
 <h4>Social</h4>
