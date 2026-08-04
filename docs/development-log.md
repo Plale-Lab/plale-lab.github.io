@@ -210,3 +210,45 @@ PlaleLab is presented as a warm scientific editorial surface crossed by a precis
 | Live URL | [https://williamq96.github.io/](https://williamq96.github.io/) |
 | Live homepage audit | Pass — six project entries, three news entries, ICICLE image loaded at 900 px natural width, 0 horizontal overflow |
 | Live Team audit | Pass — six current members, four prior affiliates, six LinkedIn links, three 640 × 640 portraits, 0 horizontal overflow |
+
+### 2026-08-03 — Phase 6: profile completion and browser identity
+
+**Status:** complete; local preview ready
+
+**Profile updates**
+
+| Member | Content added |
+|---|---|
+| Neelesh Karthikeyan | Supplied portrait, Google Scholar, LinkedIn, and GitHub |
+| Manikya Swathi Vallabhajosyula | Supplied portrait, full biography, personal website, LinkedIn, and ORCID |
+| Zhongyi "William" Qiu | Full display name, biography, personal website, and LinkedIn |
+
+**Media and browser identity**
+
+- Converted the supplied Neelesh and Swathi portraits to deterministic 640 × 640 WebP assets without generative edits. Final sizes are 25 KB and 22 KB.
+- Derived 32 × 32, 192 × 192, and 180 × 180 PNG icons from the approved PlaleLab SVG mark.
+- Added versioned SVG and PNG favicon declarations plus an Apple touch icon so browsers refresh the lab identity instead of retaining the earlier cached icon.
+- Changed the homepage browser title to `PlaleLab`; interior pages now follow the pattern `Page | PlaleLab`.
+- Added application-name metadata for browser and installed-site contexts.
+
+**Implementation note**
+
+- William's display name contains quotation marks. Escaping member names inside image alt text and profile navigation labels prevents quotation marks from breaking or escaping the generated HTML.
+- Packing each card's internal grid tracks at the top prevents a long expanded biography from vertically stretching the content of neighboring cards.
+
+**Verification**
+
+| Check | Result | Evidence |
+|---|---|---|
+| JavaScript production build | Pass | `npm run build` completed |
+| Jekyll production build | Pass | Ruby 3.2 Docker build completed without errors |
+| Patch hygiene | Pass | `git diff --check` returned no errors |
+| Homepage browser identity | Pass | Title `PlaleLab`; versioned lab SVG and PNG icons present |
+| Team browser identity | Pass | Title `Team | PlaleLab` |
+| New portraits | Pass | Both assets load at 640 × 640 natural dimensions |
+| Submitted profile links | Pass | Neelesh, Swathi, and William destinations rendered with descriptive labels |
+| William profile markup | Pass | Photo, two profile links, biography, and quoted display name render without escaped HTML |
+| Expanded biography layout | Pass | Long biography remains readable while adjacent card content stays top-aligned |
+| Desktop overflow | Pass | Team page reports 0 px horizontal overflow |
+| Mobile Team layout | Pass | 390 × 844 uses one column; new portraits and expanded biography remain visible with 0 px overflow |
+| Local preview | Ready | `http://127.0.0.1:4100/team/`, process 50232 |

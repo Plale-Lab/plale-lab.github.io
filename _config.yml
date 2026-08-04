@@ -29,7 +29,7 @@ url: "https://plale-lab.github.io"
 
 # Lab-level branding (separate from the PI identity above, used in the
 # navbar brand and page title so the site reads as the lab's, not the PI's).
-lab_name: "Plale Lab"
+lab_name: "PlaleLab"
 lab_tagline: "Traceable Intelligence"
 
 # Google Analytics — paste your GA4 measurement ID, or leave blank
