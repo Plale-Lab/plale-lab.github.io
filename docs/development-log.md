@@ -252,3 +252,32 @@ PlaleLab is presented as a warm scientific editorial surface crossed by a precis
 | Desktop overflow | Pass | Team page reports 0 px horizontal overflow |
 | Mobile Team layout | Pass | 390 × 844 uses one column; new portraits and expanded biography remain visible with 0 px overflow |
 | Local preview | Ready | `http://127.0.0.1:4100/team/`, process 50232 |
+
+### 2026-08-04 — Phase 7: ICICLE services board news correction
+
+**Status:** complete
+
+**Correction**
+
+- Stakeholder review identified that the public Component Catalog graph used in the first version represented an old view of ICICLE services.
+- Replaced it with the supplied current Unified Services Board screenshot, preserving the full board rather than cropping it to the previous image ratio.
+- Updated the headline and body to describe domain-agnostic AI-as-a-Service and CI-as-a-Service offerings, domain-specific AI services, Tapis login requirements, and the open ICICLE GitHub organization.
+- Removed the superseded Component Catalog asset from the site.
+
+**Implementation notes**
+
+- Converted the supplied 2310 × 1618 PNG to a 1800 × 1261 WebP at 192 KB so service names remain legible while keeping the homepage payload reasonable.
+- News summaries now pass through Markdown rendering, allowing editorial copy to contain accessible inline links without embedding raw HTML in the data file.
+- News images use their supplied intrinsic dimensions and automatic height, preventing screenshots with different aspect ratios from being cropped.
+
+**Verification**
+
+| Check | Result | Evidence |
+|---|---|---|
+| Jekyll production build | Pass | Ruby 3.2 Docker build completed without errors |
+| Patch hygiene | Pass | `git diff --check` returned no errors |
+| Editorial copy | Pass | Requested title and body render with working Tapis and GitHub links |
+| Replacement image | Pass | New WebP loads at 1800 × 1261; old Component Catalog image is absent |
+| Desktop News layout | Pass | Full screenshot renders uncropped at 702 × 492 with 0 px horizontal overflow |
+| Mobile News layout | Pass | 390 × 844 renders the screenshot at 346 × 242 with 0 px horizontal overflow |
+| Local preview | Ready | `http://127.0.0.1:4100/allnews.html`, process 44604 |

@@ -3,13 +3,15 @@
 
 - date: 2026-08-03
   category: Infrastructure release
-  headline: "Explore the ICICLE Unified Services Board"
-  summary: "The ICICLE service catalog brings institute software, documentation, and release evidence into one discoverable view, with the Training Catalog providing a companion path into learning resources."
+  headline: "NSF ICICLE AI Institute releases its unified services board"
+  summary: "Every ICICLE service on one board. Find domain agnostic ICICLE AI-as-a-Service and CI-as-a-Service offerings as well as domain specific AI services. You can find it all at [icicleai.tapis.io](https://icicleai.tapis.io/) though you’ll need to log in with your Tapis ID to get started. Our code is open — dig through it all at [github.com/ICICLE-ai](https://github.com/ICICLE-ai)."
   url: https://icicleai.tapis.io/#/home
-  image: /images/news/icicle-component-catalog.webp
-  image_alt: "ICICLE Component Catalog showing connected cyberinfrastructure services and details for a selected component"
-  image_caption: "ICICLE Component Catalog"
-  image_source: https://icicle.osu.edu/cyberinfrastructure/software
+  image: /images/news/icicle-unified-services-board.webp
+  image_alt: "ICICLE Unified Services Board listing domain-agnostic AI and cyberinfrastructure services and domain-specific service catalogs"
+  image_width: 1800
+  image_height: 1261
+  image_caption: "ICICLE Unified Services Board"
+  image_source: https://icicleai.tapis.io/
   featured: true
 
 - date: 2026-07-31
