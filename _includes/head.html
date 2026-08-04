@@ -1,8 +1,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{% if page.title %}{{ page.title | escape }} - {{ site.lab_name | default: site.name | escape }}{% else %}{{ site.lab_name | default: site.name | escape }}{% endif %}</title>
+  <title>{% if page.url == '/' %}{{ site.lab_name | default: site.name | escape }}{% elsif page.title %}{{ page.title | escape }} | {{ site.lab_name | default: site.name | escape }}{% else %}{{ site.lab_name | default: site.name | escape }}{% endif %}</title>
   <meta name="description" content="{{ site.description }}">
+  <meta name="application-name" content="{{ site.lab_name | default: site.name | escape }}">
+  <meta name="apple-mobile-web-app-title" content="{{ site.lab_name | default: site.name | escape }}">
 
   <!-- Open Graph / Social Sharing -->
   <meta property="og:title" content="{% if page.title %}{{ page.title | escape }}{% else %}{{ site.lab_name | default: site.name | escape }}{% endif %}">
@@ -30,8 +32,10 @@
   <!-- Styles -->
   <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}?v={{ site.time | date: '%s' }}">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-  <link rel="icon" href="{{ '/favicon.svg' | relative_url }}" type="image/svg+xml">
-  <link rel="alternate icon" href="{{ '/favicon.ico' | relative_url }}">
+  <link rel="icon" href="{{ '/favicon.svg?v=20260803b' | relative_url }}" type="image/svg+xml" sizes="any">
+  <link rel="icon" href="{{ '/favicon-32.png?v=20260803b' | relative_url }}" type="image/png" sizes="32x32">
+  <link rel="icon" href="{{ '/favicon-192.png?v=20260803b' | relative_url }}" type="image/png" sizes="192x192">
+  <link rel="apple-touch-icon" href="{{ '/apple-touch-icon.png?v=20260803b' | relative_url }}" sizes="180x180">
   <link rel="alternate" type="application/rss+xml" title="{{ site.lab_name | default: site.name | escape }}" href="{{ site.url }}{{ site.baseurl }}/feed.xml">
 
   <!-- Dark mode: apply saved theme before paint to prevent flash -->

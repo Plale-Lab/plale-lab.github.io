@@ -10,6 +10,7 @@
 }
 
 .team-card {
+  align-content: start;
   align-items: center;
   border-bottom: 1px solid var(--border-color);
   display: grid;
@@ -24,6 +25,7 @@
   &:hover { background: var(--bg-card); }
 
   .team-photo-frame {
+    align-self: start;
     background: var(--bg-secondary);
     border: 1px solid var(--border-color);
     border-radius: 50%;
